@@ -6,7 +6,7 @@
     <title>Nutri Nail Tips - Nail Health Analysis</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
-        /* General Reset */
+         /* General Reset */
         * {
             margin: 0;
             padding: 0;
@@ -301,30 +301,12 @@
     <div class="container">
         <header>
             <div class="logo-container">
-                <img src="static/nutri-nail-logo.jpeg">
-                <img src="{{ url_for('static', filename='nutri-nail-logo.jpeg') }}" alt="Nutri Nail Tips Logo" class="logo">
+                <img src="static/nutri-nail-logo.jpeg" alt="Nutri Nail Tips Logo" class="logo">
             </div>
             <h1>Nutri Nail Tips</h1>
             <p>Decode your nails, unlock your health</p>
         </header>
-        <div class="result-section" id="resultSection">
-            <h2>Analysis Results</h2>
-            <div class="result-container">
-                <div class="result-card">
-                    <h3>Detected Condition</h3>
-                    <p id="deficiencyResult">Loading...</p>
-                    <div class="confidence-meter" id="confidenceMeter" style="margin-top:15px; display:none;">
-                        <div class="confidence-bar" id="confidenceBar" style="width:0%;height:20px;background:linear-gradient(90deg,#9c27b0,#6a1b9a);border-radius:10px;transition:width 0.5s;"></div>
-                        <span id="confidenceValue" style="position:absolute;right:20px;top:5px;color:#fff;font-weight:bold;text-shadow:0 1px 2px rgba(0,0,0,0.3);"></span>
-                    </div>
-                </div>
-                <div class="result-card">
-                    <h3>Dietary Recommendations</h3>
-                    <p id="dietResult">Loading...</p>
-                    <ul id="foodList" style="margin-top:10px;display:none;"></ul>
-                </div>
-            </div>
-        </div>        
+
         <div class="upload-section fade-in">
             <h2>Upload Your Nail Image</h2>
             <div class="upload-area" id="uploadArea">
@@ -349,10 +331,15 @@
                 <div class="result-card">
                     <h3>Detected Condition</h3>
                     <p id="deficiencyResult">Loading...</p>
+                    <div class="confidence-meter" id="confidenceMeter" style="margin-top:15px; display:none;">
+                        <div class="confidence-bar" id="confidenceBar" style="width:0%;height:20px;background:linear-gradient(90deg,#9c27b0,#6a1b9a);border-radius:10px;transition:width 0.5s;"></div>
+                        <span id="confidenceValue" style="position:absolute;right:20px;top:5px;color:#fff;font-weight:bold;text-shadow:0 1px 2px rgba(0,0,0,0.3);"></span>
+                    </div>
                 </div>
                 <div class="result-card">
                     <h3>Dietary Recommendations</h3>
                     <p id="dietResult">Loading...</p>
+                    <ul id="foodList" style="margin-top:10px;display:none;"></ul>
                 </div>
             </div>
         </div>
@@ -362,27 +349,28 @@
             <div class="info-grid">
                 <div class="info-card">
                     <h3>What Nails Tell Us</h3>
-                    <p>Your nails can reveal important information about your overall health and nutritional status. Changes in color, texture, or shape may indicate deficiencies or health conditions.</p>
+                    <p>Your nails can reveal important information about your overall health and nutritional status.</p>
                 </div>
                 <div class="info-card">
                     <h3>Common Deficiencies</h3>
-                    <p>Brittle nails may suggest iron deficiency, white spots could indicate zinc deficiency, and spoon-shaped nails might point to iron-deficiency anemia.</p>
+                    <p>Brittle nails may suggest iron deficiency, white spots could indicate zinc deficiency.</p>
                 </div>
                 <div class="info-card">
                     <h3>Nail Care Tips</h3>
-                    <p>Keep nails clean and dry, avoid harsh chemicals, moisturize regularly, and maintain a balanced diet rich in biotin, protein, and minerals.</p>
+                    <p>Keep nails clean and dry, avoid harsh chemicals, and maintain a balanced diet.</p>
                 </div>
             </div>
         </div>
 
         <footer>
             <p>&copy; 2025 Nutri Nail Tips. All rights reserved.</p>
-            <p>This tool is for informational purposes only and should not replace professional medical advice.</p>
+            <p>This tool is for informational purposes only.</p>
         </footer>
     </div>
 
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
+        // (Keep all your original JavaScript code here)
+                document.addEventListener('DOMContentLoaded', function() {
             const uploadArea = document.getElementById('uploadArea');
             const fileInput = document.getElementById('fileInput');
             const uploadBtn = document.getElementById('uploadBtn');
